@@ -1,0 +1,38 @@
+
+<div id="content">
+    <div class="container">
+    <div class="seclection-title">
+        <span>Mới Cập Nhật</span>
+    </div>
+<div class="container-new-firm  active-disable">
+    {{#each pages}}  
+        <div class="new-firm">
+            <img src="{{this.image}}" alt="" class="img-new-firm">  
+            <a href="/phim/{{this.slug}}">
+                <div class="info-new-firm">
+                    <div class="text-info-new-firm">
+                        <div class="name-img-new-firm">{{this.name}}</div>
+                        <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                    </div>
+                </div>
+            </a>                    
+            <p>Tập {{this.newEp}}</p>
+        </div>
+
+    {{/each}}    
+              
+</div>
+                <div class="page-btn">
+                    <a href="/page/1"><div class="page active-page">1</div></a>
+                    <a href="/page/2"><div class="page">2</div></a>
+                    <a href="/page/3"><div class="page">3</div></a>
+                    <div class="page">...</div>
+                    <div class="page">10</div>
+                    <div class="page"><i class="ti-angle-right"></i></div>
+                </div>
+</div>
+</div>
+<script src="http://localhost:3000/jsp/jspHome.js"></script>
+
+
+                

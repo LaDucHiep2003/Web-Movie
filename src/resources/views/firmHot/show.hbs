@@ -1,0 +1,170 @@
+<div id="content-firm">
+            <div class="container">
+                <div class="container-infomation-firm">
+                    <div class="container-x">
+                        <img src="{{firmupdate.image}}" alt="" class="img-poster">
+                        <div class="info-firm">
+                            <div class="name set-child-info-firm">
+                                <div class="text-name set-flex-left col-padding-info-firm">Tên</div>
+                                <div class="name-init set-flex-fight col-padding-info-firm">
+                                    <h1>{{firmupdate.name}}</h1>
+                                </div>
+                            </div>
+                            
+                            <div class="name-other set-child-info-firm">
+                                <div class="text-name-other set-flex-left col-padding-info-firm">Tên Khác</div>
+                                <div class="name-other-init set-flex-fight col-padding-info-firm">
+                                    {{firmupdate.nameOther}}
+                                </div>
+                            </div>
+                            <div class="list-cate set-child-info-firm">
+                                <div class="text-lish-cate set-flex-left col-padding-info-firm">Thể Loại</div>
+                                <div class="list-cate-init set-flex-fight col-padding-info-firm">
+                                    <a href="">{{firmupdate.listCate}}</a>
+                                </div>
+                            </div>
+                            <div class="new-ep set-child-info-firm">
+                                <div class="text-new-ep set-flex-left col-padding-info-firm">Tập mới nhất</div>
+                                <div class="new-ep-init set-flex-fight col-padding-info-firm"><span>Tập {{firmupdate.newEp}}</span></div>
+                            </div>
+                            <div class="info-more set-child-info-firm">
+                                <div class="text-info-more set-flex-left col-padding-info-firm">Thông Tin Khác</div>
+                                <div class="info-more-init set-flex-fight col-padding-info-firm">
+                                    <div class="year">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        {{firmupdate.infoMore}}
+                                    </div>
+                                    <div class="total-episode">
+                                        <i class="fa-regular fa-clock"></i>
+                                        103 Tap
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="rate set-child-info-firm">
+                                <div class="text-rate set-flex-left col-padding-info-firm">Đánh Giá</div>
+                                <div class="rate-init set-flex-fight col-padding-info-firm"><i class="fa-solid fa-star"></i></i>{{firmupdate.rate}}</div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="watch">
+                        <div class="watching">
+                            <div class="container-watching">
+                                <a href="/phim/{{firmupdate.slug}}/{{firmupdate.newEp}}"> <i class="fa-regular fa-circle-play"></i></i>Xem Phim</a>
+                            </div>
+                            
+                        </div>
+                        <div class="follow">
+                            <div class="container-watching">
+                                <a href=""><i class="fa-solid fa-bookmark"></i></i>Theo Doi</a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="search-ep-qick">
+                        <span>
+                            
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            TÌM TẬP NHANH
+                            <i class="fa-solid fa-chevron-down"></i>
+                            
+                        </span>
+                        <span class="input-search">
+                            <input type="text" placeholder="Nhap So Tap">
+                        </span>
+                    </div>
+                    <div class="episode">
+                        <ul class="btn-epi">
+                                {{#range 1 (sum firmupdate.newEp 1)}}
+                                <li><a href="/phim/{{../firmupdate.slug}}/{{this}}">{{this}}</a></li>
+                                {{/range}}
+                        </ul>
+                    </div>
+
+                    <div class="time-line">
+                        <div class="container-time">
+                             <i class="fa-solid fa-calendar-days"></i>
+                            Phim Chiếu 1 Tập Vào Thứ 
+                            <a href="">Thu 3</a>
+                            &
+                            <a href="">Thu 7</a>
+                        </div>
+                       
+                    </div>
+
+                    <div class="text-content">
+                        <p>NỘI DUNG PHIM</p>
+                        <div class="clear"></div>
+                        <div class="review">
+                            <strong>Xem phim {{firmupdate.name}} Vietsub {{firmupdate.infoMore}}:</strong>
+                            <p>{{firmupdate.textContent}}</p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        {{#if acc.success}}
+                            <div class="form-comment">
+                                        <div class="avata-user">
+                                            <img src="{{acc.avata}}" alt="">
+                                        </div>
+                                        <div class="main-form">
+                                                <form action="/phim/comment/{{firmupdate._id}}?_method=PUT">
+                                                    <input type="text" placeholder="Tham Gia Bình Luận" name="comment">
+                                                    <div class="btn-send"><button>Gửi</button></div>
+                                                </form>
+                                        </div>
+                            </div>  
+                        {{else}}
+                        <div class="login-to-comment">
+                            <div class="login">
+                                <div class="y">
+                                    <a href="/login"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng nhập để bình luận</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                        <div class="new-comment">
+                            <div class="sort-comment">
+                                <div class="total-comment">
+                                    <span>3.5K</span> BÌNH LUẬN 
+                                </div>
+
+                                <div class="sort">
+                                    <span>Mới nhất</span>
+                                    <i class="ti-angle-down choose"></i>
+                                    <div class="choose-sort disable">
+                                        <span class="set-choose-sort">Cũ nhất</span>
+                                        <span class="set-choose-sort">Phổ biến</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-comment">
+                                <div class="main-comment">
+                                    {{#each comments}}
+                                    <div class="comment-top">
+                                        <div class="avata-user">
+                                            <img src="{{this.avata}}" alt="">
+                                        </div>
+                                        
+                                        <div class="text-comment">
+                                            <div class="nameUser"><span>{{this.accountName}}</span></div>
+                                            <div class="content-comment"><p>{{this.cmt}}</p></div>
+                                            <div class="like-comment"><div><i class="fa-solid fa-thumbs-up"></i><span>0</span></div></div>
+                                        </div>
+                                        
+                                    </div>
+                                    {{/each}}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+     

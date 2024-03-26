@@ -1,0 +1,24 @@
+
+
+<div id="content">
+    <div class="container">
+        <div class="container-new-firm  active-disable">
+                    {{#each search}}
+                    <div class="new-firm">
+                            
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                    {{/each}}
+                    
+                </div>
+    </div>
+</div>

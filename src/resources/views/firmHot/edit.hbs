@@ -1,0 +1,73 @@
+
+
+<div class="container">
+
+            <div class="change-infomation">
+                <div class="container">
+                    <div class="seclection-title">
+                        <span>Thông tin cá nhân</span>
+                    </div>
+                    
+                    <div class="container-infomation">
+                        <div class="change-avata">
+                            
+                            <img src="{{acc.avata}}" alt="">
+                            <div class="info-text">
+                                <a href="">Thay đổi avata</a>
+                                <p>{{acc.accountName}}</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="changing-infomation">
+                            <div class="container">
+                                <form method="POST" action="/my-account/{{acc._id}}?_method=PUT">
+                                    <div class="form-update">
+                                        <label for="userName">Biệt danh :</label>
+                                        <input type="text" name="userName" value="{{acc.userName}}">
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="maxim">Châm ngôn :</label>
+                                        <textarea name="maxim">{{acc.maxim}}</textarea>
+                                        
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="dateTime">Ngày sinh :</label>
+                                        <input type="date" name="dateTime" value="{{acc.dateTime}}">
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="id">Id :</label>
+                                        <input type="text" name="id" value="{{acc._id}}" readonly>
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="accountName">Tên tài khoản :</label>
+                                        <input type="text" name="accountName" value="{{acc.accountName}}">
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="email">Email :</label>
+                                        <input type="email" name="email" value="{{acc.email}}">
+                                    </div>
+
+                                    <div class="form-update">
+                                        <label for="registrationDate">Ngày đăng ký :</label>
+                                        <input type="text" name="registrationDate" value="{{acc.createdAt}}" readonly>
+                                    </div>
+
+                                    <button type="submit">Cập nhật</button>
+                                    
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+</div>

@@ -1,0 +1,167 @@
+        <div class="container">
+            <div class="main-content-container">
+                <div class="content-watch-firm">
+                    <div class="watching">
+                        <div class="movie" >
+                            <div class="handle">
+                                
+                                <video src="{{foundEpisode.v}}" id="video"></video>
+
+                                <i class="fa-solid fa-play play-video"></i>
+                            </div>
+                            <div class="backgrond-video">
+                                {{#if firmupdate.backgound}}
+                                <img src="{{firmupdate.backgound}}" alt="">
+                                {{/if}}
+                            </div>
+                            <div class="setting-speed-video visible">
+                                <div class="selection-speed">
+                                    <ul class="speeds">
+                                        <li class="speed">0.5x</li>
+                                        <li class="speed active-speed">1x </li>
+                                        <li class="speed">1.25x</li>
+                                        <li class="speed">1.5x</li>
+                                        <li class="speed">2x</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-control-video" >
+                                <div class="cd">
+                                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="1000">
+                                </div>
+                                <div class="btn-left">
+                                    <div class="btn-pause set-btn-left">
+                                        
+                                        <i class="fa-solid fa-pause pause-video-bottom set-ti-control-btn disable"></i>
+                                        <i class="fa-solid fa-play play-video-bottom set-ti-control-btn"></i>
+                                    </div>
+                                    <div class="btn-prev-second set-btn-left">
+                                        
+                                        <i class="fa-solid fa-clock-rotate-left set-ti-control-btn set-btn-setting-control-video"></i>
+                                    </div> 
+                                    <div class="btn-audio set-btn-left width-btn-audio">
+                                        
+                                        <i class="fa-solid fa-volume-high set-ti-control-btn set-btn-setting-control-video"></i>
+                                        <div class="set-volume">
+                                            <input id="volume" class="volume" type="range" value="0" step="1" min="0" max="50">
+
+                                        </div>
+                                    </div>
+                                    <div class="time-line-video">
+                                        <div class="current-video">00:00</div>
+                                        /
+                                        <div class="total-video"></div>
+                                    </div>
+                                    <div class="margin-space"></div>
+                                    <div class="btn-next-second set-btn-left">
+                                        
+                                        <i class="fa-solid fa-rotate-right set-ti-control-btn set-btn-setting-control-video"></i>
+                                    </div>
+                                    <div class="btn-next-ep set-btn-left">
+                                        
+                                        <i class="fa-solid fa-forward-step set-ti-control-btn"></i>
+                                    </div>
+                                    <div class="btn-setting set-btn-left">
+                                        <i class="fa-solid fa-gear set-ti-control-btn"></i>
+                                    </div>
+                                    <div class="btn-desktop set-btn-left">
+                                        <i class="fa-solid fa-display set-ti-control-btn set-btn-setting-control-video"></i>
+                                    </div>
+                                    <div class="btn-full-screen set-btn-left">
+                                        
+                                        <i class="fa-solid fa-up-right-and-down-left-from-center set-ti-control-btn set-btn-setting-control-video"></i>
+                                        <i class="fa-solid fa-down-left-and-up-right-to-center set-ti-control-btn set-btn-setting-control-video disable"></i>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>            
+                    </div>
+                    <div class="change-episode">
+                        <div class="container-btn-change">
+                            <a href="">
+                                <div class="episode-prev set-btn-next-ep">
+                                    <i class="fa-solid fa-backward font-size-btn"></i>
+                                    <span>Tập Trước</span>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="episode-next set-btn-next-ep">
+                                    <span>Tập Tiếp Theo</span>
+                                    <i class="fa-solid fa-forward font-size-btn"></i>
+                                </div>
+                            </a>
+                            
+                            <div class="off-leed set-btn-next-ep">
+                                <i class="fa-solid fa-sun font-size-btn"></i>
+                                <span>Tắt Đèn</span>
+                            </div>
+                            <a href="">
+                                <div class="erro set-btn-next-ep">
+                                    <i class="fa-solid fa-triangle-exclamation font-size-btn"></i>
+                                    <span>Báo Lỗi </span>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container-content-more">
+                    <section class="container">
+                        <div class="seasons">
+                            <div class="btn-season set-btn-season">
+                                Phần 1
+                            </div>
+                           
+                        </div>
+                        <div class="search-ep-qick">
+                        <span>
+                            
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            TÌM TẬP NHANH
+                            <i class="fa-solid fa-chevron-down"></i>
+                            
+                        </span>
+                        <span class="input-search">
+                            <input type="text" placeholder="Nhap So Tap">
+                        </span>
+                    </div>
+                        <div class="episode">
+                            <ul class="btn-epi">
+                                {{#range 1 (sum firmupdate.newEp 1)}}
+                                <li><a href="/phim/{{../firmupdate.slug}}/{{this}}">{{this}}</a></li>
+                                {{/range}}
+                            </ul>
+                        </div>
+                        <div class="time-line">
+                            <div class="container-time">
+                                 <i class="ti-calendar"></i>
+                                Phim Chiếu 1 Tập Vào Thứ 
+                                <a href="">Thu 3</a>
+                                &
+                                <a href="">Thu 7</a>
+                            </div>
+                           
+                        </div>
+                        <div class="comment">
+                            <div class="login-to-comment">
+                                <div class="login">
+                                    <div class="y">
+                                    
+                                    <a href="">Đăng Nhập Để Bình Luận</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="new-comment">
+                                
+                            </div>
+                        </div>
+                    
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script src="http://localhost:3000/jsp/main.js"></script>

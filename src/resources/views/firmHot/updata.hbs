@@ -1,0 +1,36 @@
+<form id="upload_form" enctype="multipart/form-data">
+  <input type="file" name="file" id="file" accept="video/*" />
+  <input type="submit" value="Upload Video" />
+</form>
+
+<script>
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name: 'dsxkwbfyq',
+  api_key: '729674232279543',
+  api_secret: '03MYXH6G60zod9FKLWSv7R4Adu0'
+});
+
+document.getElementById('upload_form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const fileInput = document.getElementById('file');
+  const file = fileInput.files[0];
+  
+    try {
+    const uploadResponse = await cloudinary.uploader.upload(file.path, {
+      resource_type: "video",
+      chunk_size: 6000000, // Chunk size in bytes (default is 6000000 bytes or 6MB)
+      use_filename: true
+    });
+    
+    console.log(uploadResponse);
+    alert('Upload successful!');
+  } catch (error) {
+    console.error('Upload failed:', error);
+    alert('Upload failed! Please try again.');
+  }
+});
+
+</script>

@@ -1,0 +1,118 @@
+<div id="header">
+            <div class="container">
+                <div class="content-header">
+                    <div class="logo">
+                        <p class="site-title">
+                            <a href="/">Trang Chu</a>
+                        </p>
+                        
+                    </div>
+
+                    <div class="search-firm">
+                            <form id="search-form" action="/search" method="GET">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input id="p" name="name" type="text" placeholder="Nhan Vao Day De Tim Kiem" >
+
+                                
+                            </form>
+                            <div class="container-result-search visible">
+                                 <ul class="result-search">
+                                    <li class="result-search-sub">Kết quả tìm kiếm :</li>
+                                    <li>
+                                    <div class="result">
+                                        <a href="">
+                                                <img src="{{this.image}}" alt="" class="result-img">
+                                                <div class="text-result">
+                                                    <div class="result-name">{{this.name}}</div>
+                                                    <div class="result-sub">{{this.namOther}}</div>
+                                                </div>
+                                        </a>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="more">
+                        {{#if acc.success}}
+                        <i class="fa-regular fa-circle-user"></i>
+                        {{/if}}
+                        <i class="fa-solid fa-bookmark"></i>
+                        <a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                        
+                    </div>
+                    <div class="clear"></div>
+                    
+                </div>
+                <div class="text-note">
+                    Lưu hoặc nhớ ngay link rút gọn 
+                    <a href=""> bit.ly/hh3d</a>
+                    để truy cập nhanh
+                </div>
+                
+            </div>
+            
+</div>
+<div class="navbar-container">
+            <div class="container">
+                <ul id="nav">
+                
+                    <li><a href="/">
+                        <i class="icon-home fa-solid fa-house set-icon-header"></i>
+                        Trang Chủ</a></li>
+                    <li>
+                        <a href="">Thể Loại
+                           
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="subnav">
+                            <li><a href="">Huyền Huyễn</a></li>
+                            <li><a href="">Xuyên Không</a></li>
+                            <li><a href="">Trùng Sinh</a></li>
+                            <li><a href="">Tiên Hiệp</a></li>
+                            <li><a href="">Cổ Trang</a></li>
+                            <li><a href="">Hài Hước</a></li>
+                            <li><a href="">Kiếm Hiệp</a></li>
+                            <li><a href="">Hiện Đại</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Phim Lẻ</a></li>
+                    <li><a href="">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        Đang Chiếu
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        Lịch Chiếu</a></li>
+                    <li><a href="">
+                        <i class="fa-regular fa-circle-check"></i>
+                        Hoàn Thành</a></li>
+                    <li><a href="">
+                        <i class="fa-regular fa-clock"></i>
+                        Sắp Chiếu</a></li>
+                    <li><a href="">
+                        <i class="fa-solid fa-trophy"></i>
+                        Top 10 Hot</a></li>
+                    <li><a href="">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        Đáng Xem</a></li>
+                    <li class="width-info-user visible">
+                            <div class="container-info-user">
+                                <div class="user">
+                                <img src="{{acc.avata}}" class="img-user" alt="">
+                                <div class="name-user">{{acc.userName}}</div>
+
+                                <ul class="">
+                                    <li><a href="/my-account/{{acc._id}}"><i class="ti-user set-icon-info-user"></i>Thông Tin</a></li>
+                                    <li><a href=""><i class="ti-eye set-icon-info-user"></i>Thông báo</a></li>
+                                    <li><a href="/logout"><i class="ti-shift-right set-icon-info-user"> </i>Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </li>
+                    <div class="clear"></div>
+                </ul>
+                </div>
+</div>
+
+
+        
