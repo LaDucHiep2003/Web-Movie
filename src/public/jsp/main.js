@@ -21,8 +21,8 @@ const backgroundVideo = $('.backgrond-video');
 const settingVideo = $('.setting-speed-video');
 const settingBtn = $('.fa-gear');
 const speed = $$('.speed');
-
-
+const btnSortComment = $('.choose')
+const hidenComment = $('.choose-sort')
 
 const app = {
     isPlaying: false,
@@ -49,6 +49,15 @@ const app = {
                 video.play();
             }
         };
+
+        btnSortComment.onclick = function(){
+            if($('.choose-sort.disable')){
+                $('.choose-sort.disable').classList.remove('disable')
+            }
+            else{
+                hidenComment.classList.add('disable')
+            }
+        }
 
 
         playVideoBottom.onclick = function () {

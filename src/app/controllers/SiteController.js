@@ -9,9 +9,7 @@ class SiteController {
     async index(req, res, next) {
         try {
             const acc = req.session.acc;
-            const home = await FirmUpdate.find({
-                pages: (req.params.pages = 1),
-            });
+            const home = await FirmUpdate.find({});
             const firmhot = await FirmHot.find({});
             res.render('home', {
                 home: muntipleMongooseToObject(home),

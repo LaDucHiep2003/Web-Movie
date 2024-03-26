@@ -13,7 +13,6 @@ class FirmsController {
         Promise.all([FirmUpdate.findOne({ slug })])
             .then(([firmupdate]) => {
                 const comments = firmupdate.comment
-                // res.json(firmupdate)
                 res.render('firmHot/show', {
                     firmupdate: mongooseToObject(firmupdate),
                     comments : mongooseToObject(comments),
@@ -26,18 +25,18 @@ class FirmsController {
 
     watch(req, res, next) {
         const slug = req.params.slug;
-
+        const acc = req.session.acc;
         Promise.all([FirmUpdate.findOne({slug})])
             .then(([firmupdate]) => {
                 const { tap } = firmupdate;
                 const x = req.params.newEp
                 const foundEpisode = tap.filter((episode) => episode.e == x);
-                
-                // res.json(foundEpisode[0])
+                const comments = firmupdate.comment
                 res.render('firmHot/watch', {
-                    
+                    comments : mongooseToObject(comments),
                     foundEpisode : mongooseToObject(foundEpisode[0]),
-                    firmupdate : mongooseToObject(firmupdate)
+                    firmupdate : mongooseToObject(firmupdate),
+                    acc
                 });
             })
             .catch(next);
@@ -50,9 +49,7 @@ class FirmsController {
 
     store(req, res, next) {
         const formDate = req.body;
-        formDate.pages = `1`;
         const firmupdate = new FirmUpdate(formDate);
-        // const cnt = FirmUpdate.countDocuments({pages : '1'})
         firmupdate
             .save()
             .then(() => res.redirect('/'))

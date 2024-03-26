@@ -7,8 +7,8 @@ const imgFirm = $$('.img-new-firm');
 const form = document.getElementById('p')
 const main = document.getElementById('main')
 const a = $('.container-result-search')
-const btnUser = $('.fa-circle-user')
-const infoUser = $('.width-info-user')
+
+
 
 const app = {
     handleEvents: function () {
@@ -28,17 +28,6 @@ const app = {
                 newFirmBtn.classList.add('active-disable');
             };
         });
-
-        btnUser.onclick = function(){
-            if($('.width-info-user.visible')){
-                $('.width-info-user.visible').classList.remove('visible')
-            }
-            else{
-                infoUser.classList.add('visible')
-            }
-
-            
-        }
 
         form.onclick = function(e){
             e.stopPropagation();

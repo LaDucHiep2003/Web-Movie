@@ -18,7 +18,6 @@ const FirmUpdate = new Schema(
         textContent: { type: String },
         videoId: { type: String },
         slug: { type: String, slug: 'name', unique: true },
-        pages: { type: String },
         backgound: { type: String },
         tap : [
             {

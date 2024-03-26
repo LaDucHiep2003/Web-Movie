@@ -122,18 +122,19 @@
   color: #fff;
   position: absolute;
   top: 50%;
-  padding: 10px 5px;
-  background-color: #d96e16;
+  padding: 12px 8px;
+  background-color: rgba(198, 43, 102, 0.7098039216);
   border-radius: 5px;
   z-index: 1;
+  cursor: pointer;
 }
 
-.x .btn-next-left-firm {
-  left: 0;
+.x .fa-angle-left {
+  left: 10px;
 }
 
-.x .btn-next-right-firm {
-  right: 0;
+.x .fa-angle-right {
+  right: 10px;
 }
 
 #header .more .fa-bookmark,
@@ -458,6 +459,7 @@
   font-size: 18px;
   color: orange;
   font-weight: 650;
+  margin: 0;
 }
 
 .close-border {
@@ -1217,6 +1219,19 @@
   float: none;
 }
 
+.set-info-more-show {
+  background-image: linear-gradient(to right, #16779f, #243759, #173844, #3b6fb9);
+  font-size: 13px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 7px;
+}
+
+.set-icon-info-more-show {
+  font-size: 15px;
+  color: #ccc;
+}
+
 .text-comment {
   background-color: #151515;
   padding: 5px 15px;
@@ -1224,6 +1239,10 @@
   position: relative;
   flex-grow: 1;
   width: calc(100% - 80px);
+}
+
+.text-comment .fa-thumbs-up {
+  margin-right: 5px;
 }
 
 .nameUser {
