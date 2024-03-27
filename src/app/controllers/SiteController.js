@@ -11,9 +11,23 @@ class SiteController {
             const acc = req.session.acc;
             const home = await FirmUpdate.find({});
             const firmhot = await FirmHot.find({});
+            const monday = await FirmUpdate.find({Showtimes : 2});
+            const tueDay = await FirmUpdate.find({Showtimes : 3});
+            const wedDay = await FirmUpdate.find({Showtimes : 4});
+            const thuDay = await FirmUpdate.find({Showtimes : 5});
+            const FriDay = await FirmUpdate.find({Showtimes : 6});
+            const SatDay = await FirmUpdate.find({Showtimes : 7});
+            const SunDay = await FirmUpdate.find({Showtimes : 8});
             res.render('home', {
                 home: muntipleMongooseToObject(home),
                 firmhot: muntipleMongooseToObject(firmhot),
+                monday : muntipleMongooseToObject(monday),
+                tueDay : muntipleMongooseToObject(tueDay),
+                wedDay : muntipleMongooseToObject(wedDay),
+                thuDay : muntipleMongooseToObject(thuDay),
+                FriDay : muntipleMongooseToObject(FriDay),
+                SatDay : muntipleMongooseToObject(SatDay),
+                SunDay : muntipleMongooseToObject(SunDay),
                 acc 
             });
         } catch (error) {

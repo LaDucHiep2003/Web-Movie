@@ -9,7 +9,6 @@ const FirmUpdate = new Schema(
     {
         name: { type: String, maxLength: 255 },
         image: { type: String },
-        // imageId : {type : String},
         nameOther: { type: String },
         listCate: { type: String },
         newEp: { type: Number },
@@ -19,6 +18,7 @@ const FirmUpdate = new Schema(
         videoId: { type: String },
         slug: { type: String, slug: 'name', unique: true },
         backgound: { type: String },
+        Showtimes : {type : Number},
         tap : [
             {
             e: {type : Number},

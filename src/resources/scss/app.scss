@@ -9,7 +9,7 @@
 }
 
 .date.active-date-time {
-    background-color: #264697 !important;
+    background: linear-gradient(140deg, rgb(155 44 117 / 80%) 0%, rgb(152 100 186 / 90%) 50%, rgb(93 20 171) 100%);
 }
 
 .container-new-firm.active-disable {
@@ -143,7 +143,7 @@
 #header .more .fa-bookmark,
 #header .more .fa-arrow-right-to-bracket,
 #header .more .fa-circle-user {
-
+    cursor: pointer;
     float: right;
     padding: 8px 15px;
     background-color: #262222;

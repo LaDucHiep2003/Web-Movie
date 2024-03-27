@@ -98,114 +98,126 @@
                     
                 </div>
                 <div class="container-new-firm">
-                   <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
+                    {{#each monday}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
                             <div class="info-new-firm">
                                 <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
                                 </div>
                             </div>
                         </a>                    
-                        <p>Tập </p>
+                        <p>Tập {{this.newEp}}</p>
                     </div>
-                     <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
-                            <div class="info-new-firm">
-                                <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
-                                </div>
-                            </div>
-                        </a>                    
-                        <p>Tập </p>
-                    </div>
-                     <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
-                            <div class="info-new-firm">
-                                <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
-                                </div>
-                            </div>
-                        </a>                    
-                        <p>Tập </p>
-                    </div>
-                     <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
-                            <div class="info-new-firm">
-                                <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
-                                </div>
-                            </div>
-                        </a>                    
-                        <p>Tập </p>
-                    </div>
-                     <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
-                            <div class="info-new-firm">
-                                <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
-                                </div>
-                            </div>
-                        </a>                    
-                        <p>Tập</p>
-                    </div>
-                     <div class="new-firm">
-                            <img src="images/gia-thien.jpg" alt="" class="img-new-firm">  
-                        <a href="">
-                            <div class="info-new-firm">
-                                <div class="text-info-new-firm">
-                                    <div class="name-img-new-firm">z</div>
-                                    <div class="sub-name-img-new-firm">z</div>
-                                </div>
-                            </div>
-                        </a>                    
-                        <p>Tập</p>
-                    </div>
-                    
+                    {{/each}}
                 </div>
                 <div class="container-new-firm">
+                {{#each tueDay}}
                     <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
                     </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
+                {{/each}}
 
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="new-firm">
-                        <img src="images/cuc-pham-gia-dinh.jpg" alt="" class="img-new-firm">
-                    </div>
-                    <div class="clear"></div>
                 </div>
+
+                <div class="container-new-firm">
+                {{#each wedDay}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                {{/each}}
+
+                </div>
+
+                <div class="container-new-firm">
+                {{#each thuDay}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                {{/each}}
+
+                </div>
+                <div class="container-new-firm">
+                {{#each FriDay}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                {{/each}}
+
+                </div>
+                <div class="container-new-firm">
+                {{#each SatDay}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                {{/each}}
+
+                </div>
+                <div class="container-new-firm">
+                {{#each SunDay}}
+                    <div class="new-firm">
+                        <a href="/phim/{{this.slug}}">
+                            <img src="{{this.image}}" alt="" class="img-new-firm">  
+                            <div class="info-new-firm">
+                                <div class="text-info-new-firm">
+                                    <div class="name-img-new-firm">{{this.name}}</div>
+                                    <div class="sub-name-img-new-firm">{{this.nameOther}}</div>
+                                </div>
+                            </div>
+                        </a>                    
+                        <p>Tập {{this.newEp}}</p>
+                    </div>
+                {{/each}}
+
+                </div>
+
                 <div class="page-btn">
                     <a href="/page/1"><div class="page active-page">1</div></a>
                     <a href="/page/2"><div class="page">2</div></a>
